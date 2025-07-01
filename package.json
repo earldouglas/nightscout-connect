@@ -10,7 +10,8 @@
     "nightscout-connect": "bin/nightscout-connect"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive",
+    "fmt": "find lib test -type f -name \"api.js\" -exec js-beautify -r --indent-size 2 --comma-first --keep-array-indentation {} \\;"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,8 @@
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
     "axios-har-tracker": "^0.5.1",
+    "js-beautify": "^1.15.4",
+    "mocha": "^11.7.1",
     "moment": "^2.29.4"
   },
   "peerDependencies": {
